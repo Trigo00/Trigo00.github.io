@@ -1,59 +1,69 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-html{
+
+html {
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.container{
+
+.container {
     min-height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-img{
+
+img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-p{
-    color: #000;
+
+p {
+    color: black;
     font-size: 1.4rem;
     margin-top: 5px;
     line-height: 2.5rem;
     font-weight: 300;
-    letter-spacing: 0.05rem;
+    letter-spacing: .05rem;
 }
-.section-title{
+
+.section-title {
     font-size: 4rem;
     font-weight: 300;
-    color: #000;
+    color: black;
     margin-bottom: 10px;
     text-transform: uppercase;
-    letter-spacing: 0.2rem;
+    letter-spacing: .2rem;
     text-align: center;
 }
-.section-title span{
-    color: #64dd3f;
-}
-.brand h1{
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: #ffffff;
-}
-.brand h1 span{
+
+.section-title span {
     color: #64dd3f;
 }
 
-#header{
+.brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand h1 span {
+    color: #64dd3f;
+}
+/* Header section */
+
+#header {
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -61,12 +71,14 @@ p{
     width: 100vw;
     height: auto;
 }
-#header .header{
+
+#header .header {
     min-height: 8vh;
     background-color: rgba(31, 30, 30, 0.24);
-    transition: 0.3s ease background-color;
+    transition: .3s ease background-color;
 }
-#header .nav-bar{
+
+#header .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -75,10 +87,11 @@ p{
     max-width: 1300px;
     padding: 0 10px;
 }
-#header .nav-list ul{
+
+#header .nav-list ul {
     list-style: none;
     position: absolute;
-    background-color: rgba(31, 30, 30, 0);
+    background-color: rgb(31, 30, 30);
     width: 100vw;
     height: 100vh;
     left: 100%;
@@ -89,11 +102,13 @@ p{
     align-items: center;
     z-index: 1;
     overflow-x: hidden;
-    transition: 0.5s ease left;
+    transition: .5s ease left;
 }
-#header .nav-list ul.active{
+
+#header .nav-list ul.active {
     left: 0%;
 }
+
 #header .nav-list ul a {
     font-size: 2.5rem;
     font-weight: 500;
@@ -124,8 +139,9 @@ p{
 }
 
 #header .nav-list ul li:hover a {
-    color: #008000;
+    color: #64dd3f;
 }
+
 #header .hamburger {
     height: 60px;
     width: 60px;
@@ -187,11 +203,11 @@ p{
 #header .hamburger.active .bar::after {
     top: 0;
 }
-
+/* End Header section -------------------------*/
 /* Hero Section */
 
 #hero {
-    background-image: url(./Imagenes/Foto1.jpg);
+    background-image: url(Imagenes/Foto1.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -246,7 +262,7 @@ p{
     left: 0;
     height: 100%;
     width: 0;
-    background-color: #008000;
+    background-color: #64dd3f;
     animation: text_reveal_box 1s ease;
     animation-delay: .5s;
 }
@@ -268,7 +284,7 @@ p{
     padding: 10px 30px;
     color: white;
     background-color: transparent;
-    border: 2px solid #008000;
+    border: 2px solid #64dd3f;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -279,25 +295,25 @@ p{
 
 .cta:hover {
     color: white;
-    background-color: #008000;
+    background-color: #64dd3f;
 }
+/* End Hero Section --------------------------------------------------------------*/
+/* Services Section */
 
-/* lenguajes Section */
-
-#lengs .lengs {
+#services .services {
     flex-direction: column;
     text-align: center;
     max-width: 1500px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
-#lengs .leng-top {
+#services .service-top {
     max-width: 500px;
     margin: 0 auto;
 }
 
-#lengs .leng-bottom {
+#services .service-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -305,7 +321,7 @@ p{
     margin-top: 50px;
 }
 
-#lengs .leng-item {
+#services .service-item {
     flex-basis: 80%;
     display: flex;
     align-items: flex-start;
@@ -313,13 +329,14 @@ p{
     flex-direction: column;
     padding: 30px;
     border-radius: 10px;
+    background-image: url(./img/img-1.png);
     background-size: cover;
     margin: 10px 5%;
     position: relative;
     z-index: 1;
 }
 
-#lengs .leng-item::after {
+#services .service-item::after {
     content: '';
     position: absolute;
     left: 0;
@@ -330,35 +347,37 @@ p{
     opacity: .9;
     z-index: -1;
 }
-#lengs .leng-bottom .leng-item .icon i{
+
+#services .service-bottom .service-item .icon i{
     font-size: 80px;
+    margin: 0 auto;
 }
-#lengs .leng-bottom .icon {
+
+#services .service-bottom .icon {
     height: 80px;
     width: 120px;
     margin-bottom: 20px;
 }
 
-#lengs .leng-item h2 {
-    font-size: 1.5rem;
+#services .service-item h2 {
+    font-size: 2rem;
     color: white;
     text-transform: uppercase;
-    text-align: center;
     margin: 0 auto;
 }
 
-#lengs .leng-item p {
+#services .service-item p {
     color: white;
     text-align: left;
 }
-
-/* Proyecto section */
+/* End Services Section --------------------------------------------------------------*/
+/* Projects section */
 
 #projects .projects {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 #projects .projects-header h1 {
@@ -409,10 +428,7 @@ p{
 #projects .project-info p {
     color: white;
 }
-#projets .project-img img{
-    width: 300px;
-    height: 300px;
-}
+
 #projects .project-img {
     /* flex-basis: 50%; */
     height: 300px;
@@ -439,15 +455,15 @@ p{
 #projects .project-item:hover .project-img img {
     transform: scale(1.1);
 }
-
-/* Sobremi Section */
+/* End Projects section ------------------------------------------------------*/
+/* About Section */
 
 #about .about {
     flex-direction: column-reverse;
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 20px;
+    padding: 50px 20px;
 }
 
 #about .col-left {
@@ -483,16 +499,19 @@ p{
     position: relative;
     border: 10px solid white;
 }
+
 #about .col-left .about-img::after {
     content: '';
     position: absolute;
+    left: -33px;
+    top: 19px;
     height: 98%;
     width: 98%;
-    border: 6px solid #008000;
+    border: 7px solid #64dd3f;
     z-index: -1;
 }
-
-/* contacto Section */
+/* End About section ------------------------------------------------------*/
+/* contact Section */
 
 #contact .contact {
     flex-direction: column;
@@ -540,7 +559,7 @@ p{
     line-height: 2rem;
     font-weight: 500;
 }
-
+/*End contact Section */
 /* Footer ---------------------------------------------------------------*/
 
 #footer {
@@ -619,7 +638,7 @@ p{
 
 @keyframes text_reveal_name {
     100% {
-        color: #008000;
+        color: #64dd3f;
         font-weight: 500;
     }
 }
@@ -634,22 +653,18 @@ p{
     h1.section-title {
         font-size: 6rem;
     }
-
     /* Hero */
-
     #hero h1 {
         font-size: 7rem;
     }
-    
-    /* lengs */
-
-    #lengs .leng-bottom .leng-item {
+    /* End Hero */
+    /* Services Section */
+    #services .service-bottom .service-item {
         flex-basis: 45%;
         margin: 2.5%;
     }
-
-    /* Proyecto */
-
+    /* End Services Section */
+    /* Project */
     #projects .project-item {
         flex-direction: row;
     }
@@ -670,9 +685,8 @@ p{
         flex-basis: 50%;
         height: 100%;
     }
-
-    /* Sobremi */
-
+    /* End Project */
+    /* About */
     #about .about {
         flex-direction: row;
     }
@@ -686,7 +700,7 @@ p{
         top: 34px;
         height: 98%;
         width: 98%;
-        border: 10px solid #008000;
+        border: 10px solid #64dd3f;
     }
     #about .col-right {
         text-align: left;
@@ -695,12 +709,11 @@ p{
     #about .col-right h1 {
         text-align: left;
     }
-    
-    /* contacto  */
-
+    /* End About */
+    /* contact  */
     #contact .contact {
         flex-direction: column;
-        padding: 20px 0;
+        padding: 100px 0;
         align-items: center;
         justify-content: center;
         min-width: 20vh;
@@ -729,6 +742,7 @@ p{
         text-align: left;
         padding-left: 20px;
     }
+    /* End contact  */
 }
 /* End Media Query For Tablet */
 /* Media Query For Desktop */
@@ -755,9 +769,10 @@ p{
     #header .nav-list ul a:after {
         display: none;
     }
-
-    #lengs .leng-bottom .leng-item {
+    /* End header */
+    #services .service-bottom .service-item {
         flex-basis: 22%;
         margin: 1.5%;
     }
+    /* End  Media Query For Desktop */
 }
