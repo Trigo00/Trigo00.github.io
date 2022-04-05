@@ -324,7 +324,7 @@ p {
 #services .service-item {
     flex-basis: 80%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 30px;
@@ -334,6 +334,7 @@ p {
     margin: 10px 5%;
     position: relative;
     z-index: 1;
+    
 }
 
 #services .service-item::after {
@@ -355,7 +356,7 @@ p {
 
 #services .service-bottom .icon {
     height: 80px;
-    width: 120px;
+    width: 110px;
     margin-bottom: 20px;
 }
 
@@ -491,6 +492,15 @@ p {
     margin-bottom: 50px;
     padding: 10px 20px;
     font-size: 2rem;
+}
+
+#about .col-right .education{
+    font-size: 12px;
+    margin-bottom: 35px;
+}
+
+#about .col-right .education h2{
+    font-size: 20px;
 }
 
 #about .col-left .about-img {
